@@ -1,0 +1,27 @@
+.transactionHistory{
+    width: 500px;
+    margin: 20px;   
+    
+}
+
+.head{
+background-color: dodgerblue;  
+margin: 20px;
+ 
+}
+
+.item{  
+       padding: 10px 20px;
+       color: white;
+       text-transform: uppercase;
+       font-size: 12px;
+       width: 60px;
+}
+
+ .itemBody{ 
+    border: 1px solid #e7e9fc;
+    padding: 0; 
+  
+    padding: 10px;
+    
+}
