@@ -1,27 +1,29 @@
 import styles from "./TransactionHistori.module.css"
 import PropTypes from 'prop-types';
-export const TransactionHistory = ({ items }) => {
-  return <table className={styles.transactionHistory}>
-  <thead className={styles.head}>
-    <tr className={styles.list}>
-      <th className={styles.item}>Type</th>
-      <th className={styles.item}>Amount</th>
-      <th className={styles.item}>Currency</th>
-    </tr>
-  </thead>
 
-      <tbody className={styles.listBody} >
-        {
-          items.map(({type, amount,currency, id}) =>(
-           <tr className={styles.listBody} key={id}>
-              <td className={styles.itemBody}>{ type}</td>
-              <td className={styles.itemBody}>{ amount}</td>
-              <td className={styles.itemBody}>{currency}</td>
-    </tr>
-        ))} 
-       
-  </tbody>
-</table>
+ export const TransactionHistory = ({ items }) => {  
+  return <table className={styles.transactionHistory}>
+      <thead>
+        <tr className={styles.list}>
+          <th className={styles.itemheader}>Type</th>
+          <th className={styles.itemheader}>Amount</th>
+          <th className={styles.itemheader}>Currency</th>
+        </tr>
+    </thead>
+    
+      <tbody className={styles.tbody}>
+        {items.map(({ type, amount, currency, id }, index) => (
+          <tr
+            key={id}
+            className={index % 2 === 0 ? styles.rowWhite : styles.rowGray}
+          >
+            <td className={styles.item}>{type}</td>
+            <td className={styles.item}>{amount}</td>
+            <td className={styles.item}>{currency}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
 }
 
 TransactionHistory.propTypes = {

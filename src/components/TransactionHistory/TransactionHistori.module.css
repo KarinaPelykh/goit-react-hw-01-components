@@ -1,27 +1,51 @@
 .transactionHistory{
-    width: 500px;
+    width: 700px;
     margin: 20px;   
+   
+    
+    border-collapse:collapse
+    
     
 }
 
 .head{
-background-color: dodgerblue;  
 margin: 20px;
  
 }
 
-.item{  
-       padding: 10px 20px;
+.itemheader{
+    
+    background-color: dodgerblue;  
+       padding: 20px 20px;
        color: white;
        text-transform: uppercase;
        font-size: 12px;
-       width: 60px;
+       width: 60px; 
+    
 }
 
+.item{
+   
+border: 1px solid #e5e5ed;
+
+padding: 10px 20px;
+color: black;
+text-align: center;
+}
  .itemBody{ 
-    border: 1px solid #e7e9fc;
-    padding: 0; 
-  
-    padding: 10px;
     
+padding: 10px;
+text-align: center;
+
+}
+
+.rowGray{
+    background-color: rgb(207, 207, 207);
+} 
+
+
+.rowWhite{
+ 
+   background-color: white;
+  
 }
