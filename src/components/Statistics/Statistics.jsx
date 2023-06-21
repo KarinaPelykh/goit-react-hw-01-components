@@ -20,13 +20,14 @@ export const Statistics = ({ title, stats }) => {
 </section>
 }
 
+
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
-  PropTypes.shape({
+    PropTypes.shape({
       id: PropTypes.number,
       label: PropTypes.string,
-      percentage: PropTypes.number
-    }))
-  
-}
+      percentage: PropTypes.number,
+    })
+  ),
+};
