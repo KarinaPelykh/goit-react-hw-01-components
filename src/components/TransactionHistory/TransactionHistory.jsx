@@ -27,11 +27,14 @@ import PropTypes from 'prop-types';
 }
 
 TransactionHistory.propTypes = {
-  items: PropTypes.array,
-  id: PropTypes.number,
+  items: PropTypes.arrayOf(
+  PropTypes.shape({
+    id: PropTypes.number,
   type: PropTypes.string,
   amount: PropTypes.number,
   currency: PropTypes.string
+  }))
+  
   
 }
 
